@@ -1,0 +1,5 @@
+.venv/
+.venv_flask/
+.vscode/
+data/corpus/
+notebooks/distilbert-piu-search/

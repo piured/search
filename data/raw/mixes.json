@@ -1,0 +1,362 @@
+[
+  {
+    "id": 6,
+    "createdAt": "2023-08-25T17:41:28.214Z",
+    "updatedAt": "2023-08-25T17:41:28.214Z",
+    "name": "REMIX",
+    "thumbnail": "REMIX/banner.jpg",
+    "beginYear": 1999,
+    "endYear": 2023,
+    "_count": {
+      "songs": 103
+    }
+  },
+  {
+    "id": 26,
+    "createdAt": "2023-08-25T17:42:26.259Z",
+    "updatedAt": "2023-08-25T17:42:26.259Z",
+    "name": "FULL SONGS",
+    "thumbnail": "FULL SONGS/banner.jpg",
+    "beginYear": 1999,
+    "endYear": 2023,
+    "_count": {
+      "songs": 88
+    }
+  },
+  {
+    "id": 29,
+    "createdAt": "2023-08-25T17:42:33.110Z",
+    "updatedAt": "2023-08-25T17:42:33.110Z",
+    "name": "SHORT CUT",
+    "thumbnail": "SHORT CUT/banner.jpg",
+    "beginYear": 1999,
+    "endYear": 2023,
+    "_count": {
+      "songs": 1
+    }
+  },
+  {
+    "id": 25,
+    "createdAt": "2023-08-25T17:42:20.547Z",
+    "updatedAt": "2023-08-25T17:42:20.547Z",
+    "name": "1ST~PERFECT",
+    "thumbnail": "1ST~PERFECT/banner.jpg",
+    "beginYear": 1999,
+    "endYear": 2000,
+    "_count": {
+      "songs": 84
+    }
+  },
+  {
+    "id": 24,
+    "createdAt": "2023-08-25T17:42:14.109Z",
+    "updatedAt": "2023-08-25T17:42:14.109Z",
+    "name": "EXTRA~PREX 3",
+    "thumbnail": "EXTRA~PREX 3/banner.jpg",
+    "beginYear": 2001,
+    "endYear": 2003,
+    "_count": {
+      "songs": 101
+    }
+  },
+  {
+    "id": 3,
+    "createdAt": "2023-08-25T17:41:21.702Z",
+    "updatedAt": "2023-08-25T17:41:21.702Z",
+    "name": "EXCEED~ZERO",
+    "thumbnail": "EXCEED~ZERO/banner.jpg",
+    "beginYear": 2004,
+    "endYear": 2006,
+    "_count": {
+      "songs": 79
+    }
+  },
+  {
+    "id": 1,
+    "createdAt": "2023-08-25T17:41:10.591Z",
+    "updatedAt": "2023-08-25T17:41:10.591Z",
+    "name": "NX~NXA",
+    "thumbnail": "NX~NXA/banner.jpg",
+    "beginYear": 2006,
+    "endYear": 2008,
+    "_count": {
+      "songs": 97
+    }
+  },
+  {
+    "id": 8,
+    "createdAt": "2023-08-25T17:41:32.668Z",
+    "updatedAt": "2023-08-25T17:41:32.668Z",
+    "name": "PRO~PRO2",
+    "thumbnail": "PRO~PRO2/banner.jpg",
+    "beginYear": 2007,
+    "endYear": 2010,
+    "_count": {
+      "songs": 1
+    }
+  },
+  {
+    "id": 12,
+    "createdAt": "2023-08-25T17:41:48.279Z",
+    "updatedAt": "2023-08-25T17:41:48.279Z",
+    "name": "FIESTA~FIESTA 2",
+    "thumbnail": "FIESTA~FIESTA 2/banner.jpg",
+    "beginYear": 2010,
+    "endYear": 2012,
+    "_count": {
+      "songs": 129
+    }
+  },
+  {
+    "id": 14,
+    "createdAt": "2023-08-25T17:42:02.881Z",
+    "updatedAt": "2023-08-25T17:42:02.881Z",
+    "name": "INFINITY",
+    "thumbnail": "INFINITY/banner.jpg",
+    "beginYear": 2013,
+    "endYear": 2013,
+    "_count": {
+      "songs": 1
+    }
+  },
+  {
+    "id": 13,
+    "createdAt": "2023-08-25T17:41:57.291Z",
+    "updatedAt": "2023-08-25T17:41:57.291Z",
+    "name": "PRIME",
+    "thumbnail": "PRIME/banner.jpg",
+    "beginYear": 2015,
+    "endYear": 2015,
+    "_count": {
+      "songs": 96
+    }
+  },
+  {
+    "id": 2,
+    "createdAt": "2023-08-25T17:41:15.237Z",
+    "updatedAt": "2023-08-25T17:41:15.237Z",
+    "name": "PRIME 2",
+    "thumbnail": "PRIME 2/banner.jpg",
+    "beginYear": 2017,
+    "endYear": 2017,
+    "_count": {
+      "songs": 99
+    }
+  },
+  {
+    "id": 16,
+    "createdAt": "2023-08-25T17:42:03.372Z",
+    "updatedAt": "2023-08-25T17:42:03.372Z",
+    "name": "STEPMAKER NETO",
+    "thumbnail": "STEPMAKER NETO/banner.jpg",
+    "beginYear": 2019,
+    "endYear": 2019,
+    "_count": {
+      "songs": 19
+    }
+  },
+  {
+    "id": 5,
+    "createdAt": "2023-08-25T17:41:27.462Z",
+    "updatedAt": "2023-08-25T17:41:27.462Z",
+    "name": "M",
+    "thumbnail": "M/banner.jpg",
+    "beginYear": 2019,
+    "endYear": 2022,
+    "_count": {
+      "songs": 20
+    }
+  },
+  {
+    "id": 10,
+    "createdAt": "2023-08-25T17:41:32.839Z",
+    "updatedAt": "2023-08-25T17:41:32.839Z",
+    "name": "PIU XX",
+    "thumbnail": "PIU XX/banner.jpg",
+    "beginYear": 2019,
+    "endYear": 2023,
+    "_count": {
+      "songs": 90
+    }
+  },
+  {
+    "id": 30,
+    "createdAt": "2023-08-25T17:42:33.131Z",
+    "updatedAt": "2023-08-25T17:42:33.131Z",
+    "name": "Snap Tracks",
+    "thumbnail": "Snap Tracks/banner.jpg",
+    "beginYear": 2020,
+    "endYear": 2023,
+    "_count": {
+      "songs": 24
+    }
+  },
+  {
+    "id": 7,
+    "createdAt": "2023-08-25T17:41:32.543Z",
+    "updatedAt": "2023-08-25T17:41:32.543Z",
+    "name": "KPop",
+    "thumbnail": "KPop/banner.jpg",
+    "beginYear": 2020,
+    "endYear": 2023,
+    "_count": {
+      "songs": 2
+    }
+  },
+  {
+    "id": 27,
+    "createdAt": "2023-08-25T17:42:30.542Z",
+    "updatedAt": "2023-08-25T17:42:30.542Z",
+    "name": "Full Tracks",
+    "thumbnail": "Full Tracks/banner.jpg",
+    "beginYear": 2020,
+    "endYear": 2023,
+    "_count": {
+      "songs": 15
+    }
+  },
+  {
+    "id": 15,
+    "createdAt": "2023-08-25T17:42:02.930Z",
+    "updatedAt": "2023-08-25T17:42:02.930Z",
+    "name": "Latin",
+    "thumbnail": "Latin/banner.jpg",
+    "beginYear": 2020,
+    "endYear": 2023,
+    "_count": {
+      "songs": 11
+    }
+  },
+  {
+    "id": 18,
+    "createdAt": "2023-08-25T17:42:08.197Z",
+    "updatedAt": "2023-08-25T17:42:08.197Z",
+    "name": "EDM",
+    "thumbnail": "EDM/banner.jpg",
+    "beginYear": 2020,
+    "endYear": 2023,
+    "_count": {
+      "songs": 56
+    }
+  },
+  {
+    "id": 19,
+    "createdAt": "2023-08-25T17:42:10.538Z",
+    "updatedAt": "2023-08-25T17:42:10.538Z",
+    "name": "Easy",
+    "thumbnail": "Easy/banner.jpg",
+    "beginYear": 2020,
+    "endYear": 2023,
+    "_count": {
+      "songs": 23
+    }
+  },
+  {
+    "id": 20,
+    "createdAt": "2023-08-25T17:42:10.843Z",
+    "updatedAt": "2023-08-25T17:42:10.843Z",
+    "name": "Season 2",
+    "thumbnail": "Season 2/banner.jpg",
+    "beginYear": 2020,
+    "endYear": 2023,
+    "_count": {
+      "songs": 103
+    }
+  },
+  {
+    "id": 21,
+    "createdAt": "2023-08-25T17:42:12.538Z",
+    "updatedAt": "2023-08-25T17:42:12.538Z",
+    "name": "Rave",
+    "thumbnail": "Rave/banner.jpg",
+    "beginYear": 2020,
+    "endYear": 2023,
+    "_count": {
+      "songs": 12
+    }
+  },
+  {
+    "id": 22,
+    "createdAt": "2023-08-25T17:42:12.709Z",
+    "updatedAt": "2023-08-25T17:42:12.709Z",
+    "name": "Rock",
+    "thumbnail": "Rock/banner.jpg",
+    "beginYear": 2020,
+    "endYear": 2023,
+    "_count": {
+      "songs": 9
+    }
+  },
+  {
+    "id": 23,
+    "createdAt": "2023-08-25T17:42:13.152Z",
+    "updatedAt": "2023-08-25T17:42:13.152Z",
+    "name": "Hip Hop",
+    "thumbnail": "Hip Hop/banner.jpg",
+    "beginYear": 2020,
+    "endYear": 2023,
+    "_count": {
+      "songs": 29
+    }
+  },
+  {
+    "id": 11,
+    "createdAt": "2023-08-25T17:41:44.741Z",
+    "updatedAt": "2023-08-25T17:41:44.741Z",
+    "name": "Pop",
+    "thumbnail": "Pop/banner.jpg",
+    "beginYear": 2020,
+    "endYear": 2023,
+    "_count": {
+      "songs": 88
+    }
+  },
+  {
+    "id": 9,
+    "createdAt": "2023-08-25T17:41:32.698Z",
+    "updatedAt": "2023-08-25T17:41:32.698Z",
+    "name": "Country",
+    "thumbnail": "Country/banner.jpg",
+    "beginYear": 2020,
+    "endYear": 2023,
+    "_count": {
+      "songs": 4
+    }
+  },
+  {
+    "id": 28,
+    "createdAt": "2023-08-25T17:42:30.739Z",
+    "updatedAt": "2023-08-25T17:42:30.739Z",
+    "name": "Haruki",
+    "thumbnail": "Haruki/banner.jpg",
+    "beginYear": 2021,
+    "endYear": 2023,
+    "_count": {
+      "songs": 78
+    }
+  },
+  {
+    "id": 4,
+    "createdAt": "2023-08-25T17:41:27.345Z",
+    "updatedAt": "2023-08-25T17:41:27.345Z",
+    "name": "PIURED",
+    "thumbnail": "PIURED/banner.jpg",
+    "beginYear": 2022,
+    "endYear": 2023,
+    "_count": {
+      "songs": 1
+    }
+  },
+  {
+    "id": 17,
+    "createdAt": "2023-08-25T17:42:04.820Z",
+    "updatedAt": "2023-08-25T17:42:04.820Z",
+    "name": "PHOENIX",
+    "thumbnail": "PHOENIX/banner.jpg",
+    "beginYear": 2023,
+    "endYear": 2023,
+    "_count": {
+      "songs": 26
+    }
+  }
+]

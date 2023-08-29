@@ -1,0 +1,14 @@
+version: '3.1'
+
+services:
+  piured-search:
+    build: .
+    # forward port 5000 on the host to port 5000 on the container
+    ports:
+      - "5000:5000"
+    
+    networks:
+      - piured
+
+networks:
+  piured:
