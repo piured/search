@@ -52,7 +52,6 @@ Entity =
   "bpm_lower_than" |
   "credit" |
   "bpm_greater_than" |
-  "meter_less_than" |
   "meter_greater_than" |
   "artist" |
   "bpm" |
@@ -61,8 +60,12 @@ Entity =
   "fakes" |
   "speeds" |
   "stops" |
-  "bpm_less_than" |
-  "meter_lower_than";
+  "meter_lower_than" |
+  "pump-single" |
+  "pump-double" |
+  "pump-halfdouble" |
+  "pump-routine" |
+  "pump-couple";
 ```
 
 The `start` and `end` fields indicate the start and end position of the entity in the text, and `word` is the word that was matched.
