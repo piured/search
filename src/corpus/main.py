@@ -59,6 +59,88 @@ gimmicks = [
     }
 ]
 
+steptypes_long = [
+    {
+        'stepstype': 'pump-single',
+        'stepstype_label': 'pump-single',
+    },
+    {
+        'stepstype': 'singles',
+        'stepstype_label': 'pump-single',
+    },
+    {
+        'stepstype': 'single',
+        'stepstype_label': 'pump-single',
+    },
+    {
+        'stepstype': 'one pad',
+        'stepstype_label': 'pump-single',
+    },
+    {
+        'stepstype': 'pump-double',
+        'stepstype_label': 'pump-double',
+    },
+    {
+        'stepstype': 'doubles',
+        'stepstype_label': 'pump-double',
+    },
+    {
+        'stepstype': 'double',
+        'stepstype_label': 'pump-double',
+    },
+    {
+        'stepstype': 'two pads',
+        'stepstype_label': 'pump-double',
+    },
+    {
+        'stepstype': 'pump-halfdouble',
+        'stepstype_label': 'pump-halfdouble',
+    },
+    {
+        'stepstype': 'halfdouble',
+        'stepstype_label': 'pump-halfdouble',
+    },
+    {
+        'stepstype': 'pump-couple',
+        'stepstype_label': 'pump-couple',
+    },
+    {
+        'stepstype': 'couple',
+        'stepstype_label': 'pump-couple',
+    },
+    {
+        'stepstype': 'pump-routine',
+        'stepstype_label': 'pump-routine',
+    },
+    {
+        'stepstype': 'routine',
+        'stepstype_label': 'pump-routine',
+    },
+]
+
+steptypes_short = [
+    {
+        'stepstype': 's',
+        'stepstype_label': 'pump-single',
+    },
+    {
+        'stepstype': 'd',
+        'stepstype_label': 'pump-double',
+    },
+    {
+        'stepstype': 'hd',
+        'stepstype_label': 'pump-halfdouble',
+    },
+    {
+        'stepstype': 'c',
+        'stepstype_label': 'pump-couple',
+    },
+    {
+        'stepstype': 'r',
+        'stepstype_label': 'pump-routine',
+    },
+]
+
 
 def parse_args():
 
@@ -234,7 +316,7 @@ def prompt_credit_name(credit_name: str):
     return slot
 
 
-def prompt_stepstype_name(stepstype_name: str):
+def prompt_stepstype_name(stepstype_name: str, stepstype_label: str):
 
     prompt_choices = [
         'steps type',
@@ -245,7 +327,7 @@ def prompt_stepstype_name(stepstype_name: str):
     ]
 
     prompt = random.choice(prompt_choices)
-    slot = gen_slot('stepstype', stepstype_name, prompt)
+    slot = gen_slot(stepstype_label, stepstype_name, prompt)
     # get a random choice from the list
     return slot
 
@@ -270,10 +352,12 @@ def prompt_meter_less_than(meter: str):
         '<',
         'level less than',
         'meter less than',
+        'level lower than',
+        'meter lower than',
         'lvl less than',
     ]
     prompt = random.choice(prompt_choices)
-    slot = gen_slot('meter_less_than', meter, prompt)
+    slot = gen_slot('meter_lower_than', meter, prompt)
     return slot
 
 
@@ -285,6 +369,8 @@ def prompt_meter_greater_than(meter: str):
         '>',
         'level greater than',
         'meter greater than',
+        'level higher than',
+        'meter higher than',
         'lvl greater than',
     ]
     prompt = random.choice(prompt_choices)
@@ -292,9 +378,9 @@ def prompt_meter_greater_than(meter: str):
     return slot
 
 
-def prompt_meter_stepstype_name(meter: str, stepstype_name: str, slot_name: str = 'meter'):
+def prompt_meter_stepstype_name(meter: str, stepstype_name: str, stepstype_label: str, slot_name: str = 'meter'):
     slot_meter = gen_slot(slot_name, meter, '', '', '', '')
-    slot_stepstype = gen_slot('stepstype', stepstype_name, '', '', '', '')
+    slot_stepstype = gen_slot(stepstype_label, stepstype_name, '', '', '', '')
     sep_choices = [
         ' ',
         ' lvl. ',
@@ -309,9 +395,26 @@ def prompt_meter_stepstype_name(meter: str, stepstype_name: str, slot_name: str 
     return slot
 
 
-def prompt_meter_stepstype_range(meter_low: str, meter_high: str, stepstype_name: str):
+def prompt_meter_stepstype_name(meter: str, stepstype_name: str, stepstype_label: str, slot_name: str = 'meter'):
+    slot_meter = gen_slot(slot_name, meter, '', '', '', '')
+    slot_stepstype = gen_slot(stepstype_label, stepstype_name, '', '', '', '')
+    sep_choices = [
+        ' ',
+        ' lvl. ',
+        ' lvl ',
+    ]
+    slot = glue_slots(
+        slot_stepstype,
+        slot_meter,
+        random.choice(sep_choices)
+    )
+
+    return slot
+
+
+def prompt_meter_stepstype_range(meter_low: str, meter_high: str, stepstype_name: str, stepstype_label: str):
     low = prompt_meter_stepstype_name(
-        meter_low, stepstype_name, 'meter_greater_than')
+        meter_low, stepstype_name, stepstype_label, 'meter_greater_than')
     slot_high = gen_slot('meter_lower_than', meter_high, '', '', '', '')
 
     sep_choices = [
@@ -350,7 +453,7 @@ def prompt_bpm_less_than(bpm: str):
     ]
 
     prompt = random.choice(prompt_choices)
-    slot = gen_slot('bpm_less_than', bpm, prompt)
+    slot = gen_slot('bpm_lower_than', bpm, prompt)
     return slot
 
 
@@ -402,12 +505,23 @@ class ListIterator:
         return item
 
 
+def strip_string(string: str, min_number_chars: int = 3):
+    # strip string so that its number of chars ranges between 3 and a random number between 3 and the length of the string.
+    # if the legnth of the string is 3 or less, don't strip it
+    if len(string) > min_number_chars:
+        a = string[:random.randint(
+            min_number_chars, len(string)-1)]
+        return a
+    return string
+
+
 def create_prompts(no_samples: int, mix_names, tune_names, tune_artists, level_stepstypes, level_credits, **kwargs):
 
     mixes = ListIterator(mix_names)
     tunes = ListIterator(tune_names)
     artists = ListIterator(tune_artists)
-    stepstypes = ListIterator(level_stepstypes)
+    stepstypes_long_it = ListIterator(steptypes_long)
+    stepstypes_short_it = ListIterator(steptypes_short)
     credits = ListIterator(level_credits)
     # create a random int generator between 0 and 99 for levels. it won't be a list iterator
     def levels(): return str(random.randint(0, 99))
@@ -421,8 +535,16 @@ def create_prompts(no_samples: int, mix_names, tune_names, tune_artists, level_s
         mix_name = mixes.next()
         tune_name = tunes.next()
         artist_name = artists.next()
-        stepstype_name = stepstypes.next()
         credit_name = credits.next()
+
+        min_number_chars = 3
+        mix_name = strip_string(mix_name, min_number_chars)
+        tune_name = strip_string(tune_name, min_number_chars)
+        artist_name = strip_string(artist_name, min_number_chars)
+        credit_name = strip_string(credit_name, min_number_chars)
+
+        stepstype_name_long = stepstypes_long_it.next()
+        stepstype_name_short = stepstypes_short_it.next()
 
         lvls = [levels(), levels()]
         lvls.sort()
@@ -441,12 +563,15 @@ def create_prompts(no_samples: int, mix_names, tune_names, tune_artists, level_s
                 prompt_credit_name(credit_name),
             ]),
             random.choice([
+                prompt_stepstype_name(
+                    stepstype_name_long['stepstype'], stepstype_name_long['stepstype_label']),
                 prompt_meter(level1),
                 prompt_meter_less_than(level1),
                 prompt_meter_greater_than(level1),
-                prompt_meter_stepstype_name(level1, stepstype_name),
+                prompt_meter_stepstype_name(
+                    level1, stepstype_name_long['stepstype'], stepstype_name_long['stepstype_label']),
                 prompt_meter_stepstype_range(
-                    level1, level2, random.choice(['s', 'd', 'hd'])),
+                    level1, level2, stepstype_name_short['stepstype'], stepstype_name_short['stepstype_label']),
             ]),
             random.choice([
                 prompt_bpm(bpm1),
