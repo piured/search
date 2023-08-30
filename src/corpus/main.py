@@ -511,6 +511,11 @@ def strip_string(string: str, min_number_chars: int = 3):
     if len(string) > min_number_chars:
         a = string[:random.randint(
             min_number_chars, len(string)-1)]
+
+        # remove trailing spaces
+        a = a.rstrip()
+        # remove specials unicode chars
+        a = a.encode('ascii', 'ignore').decode('ascii')
         return a
     return string
 
