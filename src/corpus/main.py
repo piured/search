@@ -61,83 +61,83 @@ gimmicks = [
 
 steptypes_long = [
     {
-        'stepstype': 'pump-single',
-        'stepstype_label': 'pump-single',
+        'stepstype': 'pump_single',
+        'stepstype_label': 'pump_single',
     },
     {
         'stepstype': 'singles',
-        'stepstype_label': 'pump-single',
+        'stepstype_label': 'pump_single',
     },
     {
         'stepstype': 'single',
-        'stepstype_label': 'pump-single',
+        'stepstype_label': 'pump_single',
     },
     {
         'stepstype': 'one pad',
-        'stepstype_label': 'pump-single',
+        'stepstype_label': 'pump_single',
     },
     {
-        'stepstype': 'pump-double',
-        'stepstype_label': 'pump-double',
+        'stepstype': 'pump_double',
+        'stepstype_label': 'pump_double',
     },
     {
         'stepstype': 'doubles',
-        'stepstype_label': 'pump-double',
+        'stepstype_label': 'pump_double',
     },
     {
         'stepstype': 'double',
-        'stepstype_label': 'pump-double',
+        'stepstype_label': 'pump_double',
     },
     {
         'stepstype': 'two pads',
-        'stepstype_label': 'pump-double',
+        'stepstype_label': 'pump_double',
     },
     {
-        'stepstype': 'pump-halfdouble',
-        'stepstype_label': 'pump-halfdouble',
+        'stepstype': 'pump_halfdouble',
+        'stepstype_label': 'pump_halfdouble',
     },
     {
         'stepstype': 'halfdouble',
-        'stepstype_label': 'pump-halfdouble',
+        'stepstype_label': 'pump_halfdouble',
     },
     {
-        'stepstype': 'pump-couple',
-        'stepstype_label': 'pump-couple',
+        'stepstype': 'pump_couple',
+        'stepstype_label': 'pump_couple',
     },
     {
         'stepstype': 'couple',
-        'stepstype_label': 'pump-couple',
+        'stepstype_label': 'pump_couple',
     },
     {
-        'stepstype': 'pump-routine',
-        'stepstype_label': 'pump-routine',
+        'stepstype': 'pump_routine',
+        'stepstype_label': 'pump_routine',
     },
     {
         'stepstype': 'routine',
-        'stepstype_label': 'pump-routine',
+        'stepstype_label': 'pump_routine',
     },
 ]
 
 steptypes_short = [
     {
         'stepstype': 's',
-        'stepstype_label': 'pump-single',
+        'stepstype_label': 'pump_single',
     },
     {
         'stepstype': 'd',
-        'stepstype_label': 'pump-double',
+        'stepstype_label': 'pump_double',
     },
     {
         'stepstype': 'hd',
-        'stepstype_label': 'pump-halfdouble',
+        'stepstype_label': 'pump_halfdouble',
     },
     {
         'stepstype': 'c',
-        'stepstype_label': 'pump-couple',
+        'stepstype_label': 'pump_couple',
     },
     {
         'stepstype': 'r',
-        'stepstype_label': 'pump-routine',
+        'stepstype_label': 'pump_routine',
     },
 ]
 
@@ -591,7 +591,6 @@ def create_prompts(no_samples: int, mix_names, tune_names, tune_artists, level_s
         # this will be the order of the prompts
         # then sort it
         prompt_order = random.sample(range(4), random.randint(1, 4))
-        prompt_order.sort()
 
         # glue all prompts together using glue_slots
         prompt = prompt_list[prompt_order[0]]

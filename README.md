@@ -47,7 +47,6 @@ where `Entity` is one of the following:
 Entity =
   "tune" |
   "mix" |
-  "stepstype" |
   "meter" |
   "bpm_lower_than" |
   "credit" |
@@ -61,11 +60,11 @@ Entity =
   "speeds" |
   "stops" |
   "meter_lower_than" |
-  "pump-single" |
-  "pump-double" |
-  "pump-halfdouble" |
-  "pump-routine" |
-  "pump-couple";
+  "pump_single" |
+  "pump_double" |
+  "pump_halfdouble" |
+  "pump_routine" |
+  "pump_couple";
 ```
 
 The `start` and `end` fields indicate the start and end position of the entity in the text, and `word` is the word that was matched.
