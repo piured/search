@@ -263,6 +263,16 @@ def prompt_tune_name(tune_name: str):
         'title',
         '',
         'chart',
+        'Play a tune',
+        'Choose a song',
+        'Find the title',
+        'Select the chart',
+        'Pick the melody',
+        'Search for the track',
+        'Listen to the tune',
+        'Look up the song',
+        'Retrieve the melody',
+        'Get the chart'
     ]
     prompt = random.choice(prompt_choices)
 
@@ -278,6 +288,16 @@ def prompt_mix_name(mix_name: str):
         'release',
         'folder',
         '',
+        'Play the mix',
+        'Choose the album',
+        'Find the release',
+        'Select the folder',
+        'Pick the playlist',
+        'Search for the mix',
+        'Listen to the album',
+        'Look up the release',
+        'Retrieve the playlist',
+        'Get the folder'
     ]
     prompt = random.choice(prompt_choices)
 
@@ -345,7 +365,7 @@ def prompt_meter(meter: str):
 
 
 def prompt_meter_less_than(meter: str):
-    prompt_choices = [
+    prompt_choices_before = [
         'meter <',
         'lvl <',
         'level <',
@@ -356,13 +376,21 @@ def prompt_meter_less_than(meter: str):
         'meter lower than',
         'lvl less than',
     ]
-    prompt = random.choice(prompt_choices)
-    slot = gen_slot('meter_lower_than', meter, prompt)
+
+    prompt_choices_after = [
+        '-'
+    ]
+    list_choices = prompt_choices_before + prompt_choices_after
+    prompt = random.choice(list_choices)
+    if prompt in prompt_choices_after:
+        slot = gen_slot('meter_lower_than', meter, '', prompt, '', '')
+    else:
+        slot = gen_slot('meter_lower_than', meter, prompt)
     return slot
 
 
 def prompt_meter_greater_than(meter: str):
-    prompt_choices = [
+    prompt_choices_before = [
         'meter >',
         'lvl >',
         'level >',
@@ -373,8 +401,16 @@ def prompt_meter_greater_than(meter: str):
         'meter higher than',
         'lvl greater than',
     ]
-    prompt = random.choice(prompt_choices)
-    slot = gen_slot('meter_greater_than', meter, prompt)
+
+    prompt_choices_after = [
+        '+'
+    ]
+    list_choices = prompt_choices_before + prompt_choices_after
+    prompt = random.choice(list_choices)
+    if prompt in prompt_choices_after:
+        slot = gen_slot('meter_greater_than', meter, '', prompt, '', '')
+    else:
+        slot = gen_slot('meter_greater_than', meter, prompt)
     return slot
 
 
@@ -395,8 +431,25 @@ def prompt_meter_stepstype_name(meter: str, stepstype_name: str, stepstype_label
     return slot
 
 
-def prompt_meter_stepstype_name(meter: str, stepstype_name: str, stepstype_label: str, slot_name: str = 'meter'):
-    slot_meter = gen_slot(slot_name, meter, '', '', '', '')
+def prompt_meter_greater_than_stepstype(meter: str, stepstype_name: str, stepstype_label: str):
+    slot_meter = gen_slot('meter_greater_than', meter, '', '+', '', '')
+    slot_stepstype = gen_slot(stepstype_label, stepstype_name, '', '', '', '')
+    sep_choices = [
+        ' ',
+        ' lvl. ',
+        ' lvl ',
+    ]
+    slot = glue_slots(
+        slot_stepstype,
+        slot_meter,
+        random.choice(sep_choices)
+    )
+
+    return slot
+
+
+def prompt_meter_lower_than_stepstype(meter: str, stepstype_name: str, stepstype_label: str):
+    slot_meter = gen_slot('meter_lower_than', meter, '', '-', '', '')
     slot_stepstype = gen_slot(stepstype_label, stepstype_name, '', '', '', '')
     sep_choices = [
         ' ',
@@ -577,6 +630,11 @@ def create_prompts(no_samples: int, mix_names, tune_names, tune_artists, level_s
                     level1, stepstype_name_long['stepstype'], stepstype_name_long['stepstype_label']),
                 prompt_meter_stepstype_range(
                     level1, level2, stepstype_name_short['stepstype'], stepstype_name_short['stepstype_label']),
+                prompt_meter_greater_than_stepstype(
+                    level1, stepstype_name_short['stepstype'], stepstype_name_short['stepstype_label']),
+                prompt_meter_lower_than_stepstype(
+                    level1, stepstype_name_short['stepstype'], stepstype_name_short['stepstype_label']),
+
             ]),
             random.choice([
                 prompt_bpm(bpm1),
