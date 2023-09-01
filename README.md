@@ -59,6 +59,10 @@ Entity =
   "fakes" |
   "speeds" |
   "stops" |
+  "delays" |
+  "sudden" |
+  "hidden" |
+  "vanish" |
   "meter_lower_than" |
   "pump_single" |
   "pump_double" |

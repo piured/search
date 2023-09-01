@@ -56,7 +56,40 @@ gimmicks = [
     {
         'gimmick': 'Sc',
         'gimmick_type': 'scrolls',
+    },
+    {
+        'gimmick': 'delays',
+        'gimmick_type': 'delays',
+    },
+    {
+        'gimmick': 'dlys',
+        'gimmick_type': 'delays',
+    },
+    {
+        'gimmick': 'vanish',
+        'gimmick_type': 'vanish',
+    },
+    {
+        'gimmick': 'vnsh',
+        'gimmick_type': 'vanish',
+    },
+    {
+        'gimmick': 'sudden',
+        'gimmick_type': 'sudden',
+    },
+    {
+        'gimmick': 'sddn',
+        'gimmick_type': 'sudden',
+    },
+    {
+        'gimmick': 'hidden',
+        'gimmick_type': 'hidden',
+    },
+    {
+        'gimmick': 'hdn',
+        'gimmick_type': 'hidden',
     }
+
 ]
 
 steptypes_long = [
