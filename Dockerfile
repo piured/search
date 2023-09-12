@@ -5,7 +5,7 @@ COPY requirements_inference.txt /opt/requirements_inference.txt
 WORKDIR /opt
 RUN pip install --no-cache-dir -r requirements_inference.txt
 
-COPY notebooks/distilbert-piu-search/checkpoint-5625 /opt/model
+COPY notebooks/distilbert-piu-search/checkpoint-11250 /opt/model
 
 WORKDIR /opt/src/service
 
